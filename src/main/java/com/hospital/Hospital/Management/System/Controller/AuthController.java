@@ -25,7 +25,7 @@ public class AuthController {
         this.jwtService = jwtService;
     }
 
-    @PostMapping("/login")
+    @PostMapping(value = "/login", consumes = "application/json", produces = "application/json")
     public ResponseEntity<LoginResponse> login(
             @RequestBody LoginRequest loginRequest) {
         try {
